@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="../css/css.css">
     <style>
         .top-bar {
-            background-color: #343a40;
-            height: 50px;
+            background-color:rgb(119, 0, 0);
+            height: 40px;
         }
         .nav-bar {
             background-color: white;
@@ -44,35 +44,31 @@
         .nav-link:hover {
             color: rgb(119, 0, 0);
         }
-        .wave-section {
-            position: relative;
+        <style>
+        .top-bar {
+            background-color: rgb(119, 0, 0);
+            height: 40px;
+        }
+        .nav-bar {
+            background-color: white;
+            padding: 20px 0;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background:rgb(255, 255, 255);
+            padding: 30px;
+            
+        }
+        .btn-vinho {
             background-color: rgb(119, 0, 0);
             color: white;
-            padding: 100px 0;
         }
-        .wave-section::after {
-            content: "";
-            position: absolute;
-            bottom: -50px;
-            left: 0;
-            width: 100%;
-            height: 100px;
-            background: url('https://www.svgrepo.com/show/208086/wave.svg') repeat-x;
-            background-size: cover;
-        }
-        .content-section {
-            background-color: white;
-            padding: 100px 0;
-        }
-        .carousel-container {
-            max-width: 1000px; 
-            margin: 0 auto; 
-        }
-        .carousel-inner img {
-            height: 450px; 
-            object-fit: cover;
+        .btn-vinho:hover {
+            background-color: rgb(100, 0, 0);
         }
     </style>
+    
 </head>
 <body>
 
@@ -92,6 +88,73 @@
         </nav>
     </div>
 </header>
+
+<div class="container py-5">
+    <h2 class="text-center mb-4">Nossos Cursos</h2>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card course-card">
+                <img src="{{ asset('img/curso1.png') }}" alt="Curso Técnico" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Cursos Técnicos - Modalidade Presencial</h5>
+                    <p class="card-text">
+                        Formação prática e teórica presencial em áreas específicas, com foco na inserção rápida no mercado de trabalho.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card course-card">
+                <img src="{{ asset('img/curso2.png') }}" alt="Ensino Médio Integrado" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Ensino Médio Integrado ao Técnico</h5>
+                    <p class="card-text">
+                        Currículo que une o ensino médio regular com a formação técnica, preparando o aluno para o vestibular e para o mercado.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card course-card">
+                <img src="{{ asset('img/curso3.png') }}" alt="Articulação" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Articulação dos Ensinos Médios</h5>
+                    <p class="card-text">
+                    é uma modalidade de ensino Médio com os professores da ETEC, ofertado em parceria e no prédio da FATEC que permite que o estudante conclua o ensino médio, técnico e superior em cinco anos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<br><br><br><br>
+
+<footer class="footer text-white py-4" style="background-color:  rgb(119, 0, 0);">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-3">
+                <h5>Endereço</h5>
+                <p>Avenida Águia de Haia, 2.633 - Cidade AE Carvalho - São Paulo/SP - CEP: 03694-000</p>
+            </div>
+            <div class="col-md-3">
+                <h5>Telefone</h5>
+                <p>(11) 2045-4000 / 2045-4016</p>
+            </div>
+            <div class="col-md-3">
+                <h5>Horário</h5>
+                <p><i class="bi bi-clock"></i> Seg. a Sex. das 09h às 21h</p>
+            </div>
+            <div class="col-md-3 text-end">
+                <img src="{{ asset('img/sp.png') }}" class="footer-img">
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

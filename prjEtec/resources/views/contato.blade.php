@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="../css/css.css">
     <style>
         .top-bar {
-            background-color: #343a40;
-            height: 50px;
+            background-color:rgb(119, 0, 0);
+            height: 40px;
         }
         .nav-bar {
             background-color: white;
@@ -44,35 +44,31 @@
         .nav-link:hover {
             color: rgb(119, 0, 0);
         }
-        .wave-section {
-            position: relative;
+        <style>
+        .top-bar {
+            background-color: rgb(119, 0, 0);
+            height: 40px;
+        }
+        .nav-bar {
+            background-color: white;
+            padding: 20px 0;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background:rgb(255, 255, 255);
+            padding: 30px;
+            
+        }
+        .btn-vinho {
             background-color: rgb(119, 0, 0);
             color: white;
-            padding: 100px 0;
         }
-        .wave-section::after {
-            content: "";
-            position: absolute;
-            bottom: -50px;
-            left: 0;
-            width: 100%;
-            height: 100px;
-            background: url('https://www.svgrepo.com/show/208086/wave.svg') repeat-x;
-            background-size: cover;
-        }
-        .content-section {
-            background-color: white;
-            padding: 100px 0;
-        }
-        .carousel-container {
-            max-width: 1000px; 
-            margin: 0 auto; 
-        }
-        .carousel-inner img {
-            height: 450px; 
-            object-fit: cover;
+        .btn-vinho:hover {
+            background-color: rgb(100, 0, 0);
         }
     </style>
+    
 </head>
 <body>
 
@@ -92,6 +88,58 @@
         </nav>
     </div>
 </header>
+
+<div class="container">
+    <div class="form-container">
+        <h2 class="text-center">Contato</h2>
+        <form>
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nome" placeholder="Digite seu nome" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Digite seu email" required>
+            </div>
+            <div class="mb-3">
+                <label for="assunto" class="form-label">Assunto</label>
+                <input type="text" class="form-control" id="assunto" placeholder="Digite o assunto" required>
+            </div>
+            <div class="mb-3">
+                <label for="mensagem" class="form-label">Mensagem</label>
+                <textarea class="form-control" id="mensagem" rows="5" placeholder="Digite sua mensagem" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-vinho w-100">Enviar</button>
+        </form>
+    </div>
+</div>
+
+<br><br><br><br>
+
+<footer class="footer text-white py-4" style="background-color:  rgb(119, 0, 0);">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-3">
+                <h5>Endereço</h5>
+                <p>Avenida Águia de Haia, 2.633 - Cidade AE Carvalho - São Paulo/SP - CEP: 03694-000</p>
+            </div>
+            <div class="col-md-3">
+                <h5>Telefone</h5>
+                <p>(11) 2045-4000 / 2045-4016</p>
+            </div>
+            <div class="col-md-3">
+                <h5>Horário</h5>
+                <p><i class="bi bi-clock"></i> Seg. a Sex. das 09h às 21h</p>
+            </div>
+            <div class="col-md-3 text-end">
+                <img src="{{ asset('img/sp.png') }}" class="footer-img">
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

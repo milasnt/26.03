@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="../css/css.css">
     <style>
         .top-bar {
-            background-color: #343a40;
-            height: 50px;
+            background-color:rgb(119, 0, 0);
+            height: 40px;
         }
         .nav-bar {
             background-color: white;
@@ -69,9 +69,35 @@
             margin: 0 auto; 
         }
         .carousel-inner img {
-            height: 450px; 
+            height: 550px; 
             object-fit: cover;
         }
+        .gray-image 
+        {
+            filter: grayscale(70%) brightness(50%);
+        }
+
+
+.custom-caption {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10%;
+    z-index: 2;
+    text-align: left;
+    color: white;
+    max-width: 500px;
+}
+
+.custom-caption h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.custom-caption p {
+    font-size: 1.25rem;
+}
+
     </style>
 </head>
 <body>
@@ -92,17 +118,29 @@
         </nav>
     </div>
 </header>
-
 <div class="carousel-container">
     <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="9000">
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="{{ asset('img/carrossel1.png') }}" class="d-block w-100" alt="Slide 1">
+            <!-- Slide 1 -->
+            <div class="carousel-item active position-relative">
+                <img src="{{ asset('img/carrossel1.png') }}" class="d-block w-100 gray-image" alt="Slide 1">
+                <div class="carousel-overlay"></div>
+                <div class="carousel-caption custom-caption">
+                    <h3>Conheça os nossos cursos</h3>
+                    <a href="{{ route('cursos') }}" class="btn btn-danger mt-3">Visitar</a>
+                </div>
             </div>
-            <div class="carousel-item">
-                <img src="{{ asset('img/carrossel2.png') }}" class="d-block w-100" alt="Slide 2">
+
+            <div class="carousel-item position-relative">
+                <img src="{{ asset('img/carrossel2.png') }}" class="d-block w-100 gray-image" alt="Slide 2">
+                <div class="carousel-overlay"></div>
+                <div class="carousel-caption custom-caption">
+                    <h3>Conheça os nossos departamentos</h3>
+                    <a href="{{ route('departamento') }}" class="btn btn-danger mt-3">Visitar</a>
+                </div>
             </div>
         </div>
+
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
@@ -114,21 +152,33 @@
     </div>
 </div>
 
+
 <br><br><br>
 
-<section class="wave-section">
-    <div class="container text-center">
-        <h2>Seção Vermelha</h2>
-        <p>Infos</p>
+<footer class="footer text-white py-4" style="background-color: rgb(119, 0, 0);">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-3">
+                <h5>Endereço</h5>
+                <p>Avenida Águia de Haia, 2.633 - Cidade AE Carvalho - São Paulo/SP - CEP: 03694-000</p>
+            </div>
+            <div class="col-md-3">
+                <h5>Telefone</h5>
+                <p>(11) 2045-4000 / 2045-4016</p>
+            </div>
+            <div class="col-md-3">
+                <h5>Horário</h5>
+                <p><i class="bi bi-clock"></i> Seg. a Sex. das 09h às 21h</p>
+            </div>
+            <div class="col-md-3 text-end">
+                <img src="{{ asset('img/sp.png') }}" class="footer-img">
+            </div>
+        </div>
     </div>
-</section>
+</footer>
 
-<section class="content-section">
-    <div class="container text-center">
-        <h2>Seção Branca</h2>
-        <p>Infos.</p>
-    </div>
-</section>
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
